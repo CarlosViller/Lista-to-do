@@ -10,8 +10,9 @@ $('ul').on('click','span', function(event){
   event.stopPropagation();
 })
 
-$('input[type="text"').keypress(function (e) { 
+$('input[type="text"]').keypress(function (e) { 
   if (e.key == 'Enter') {
     $('ul').append(`<li><span><i class='fa fa-trash' aria-hidden='true'></i></span>${$(this).val()}</li>`);
+    $('input[type="text"]').val('');
   }
 });
